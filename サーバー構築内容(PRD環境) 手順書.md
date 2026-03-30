@@ -8,14 +8,15 @@
 
 ### 【PRD環境 Windows Server 側での作業】
 
-#### ■ 手順① コピーしたディレクトないにある仮想環境のフォルダーを削除する
+#### ■ 手順① コピーしたディレクト内にある仮想環境のフォルダーを削除する
 `venv`フォルダーを削除
+※ STG環境のパスで生成されている可能性が高いので、一度削除して作り直す
 
 #### ■ 手順② 仮想環境（venv）の作成
 `python -m venv venv`
 
 #### ■ 手順③ 仮想環境の有効化
-`venv\Scripts\activate`
+`venv\Scripts\Activate.ps1`
 
 #### ■ 手順④ オフラインインストールの実行
 `pip install --no-index --find-links=packages -r requirements.txt`
@@ -28,7 +29,7 @@ config.envをprd用の値で上書きをする
 
 
 ## タスクスケジューラの設定をする
-https://github.com/kmmsjp/win-task-scheduler-ps1 のリポジトリを参照にしてバッチ設定をする
+https://github.com/kmmsjp/win-task-scheduler-ps1 のリポジトリを参照にしてタスクスケジューラ設定をする
 
 
 ## プログラムのデプロイ場所
